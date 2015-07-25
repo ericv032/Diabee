@@ -1,0 +1,41 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+
+body { background:#f3f3f3; padding-top: 40px; border-top:solid 2px #e14c3b; font-family: 'Open Sans', sans-serif; }
+
+/* Bootstrap overwrites
+-------------------------------- */
+
+.container {max-width: 600px; position: relative; }
+.container-inner { padding:5%; }
+.fa.fa-user {font-size: 140%; }
+.page-header {border: 0; }
+.entry {background-color:#fff; display: block; margin-bottom: 20px;  padding-top: 10px;  }
+
+.btn.add {background: none; border-color: #74c17b; color: #74c17b; }
+
+.meta {padding: 10px 0; }
+
+.meta a {color:#999; font-weight: 200; }
+
+/* Header
+-------------------------------- */
+/* Logo */
+.logo {display: block; text-align: center; }
+.logo i, .logo h3 {color:#e14c3b; }
+.logo i {font-size: 110%; margin-right: 10px; }
+.logo h3 {font-size: 260%; font-family: 'Open Sans', sans-serif; font-weight: 700; } 
