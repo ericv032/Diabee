@@ -15,14 +15,19 @@
  *= require font-awesome
  */
 
-body { background:#f3f3f3; padding-top: 30px; border-top:solid 2px #e14c3b; font-family: 'Open Sans', sans-serif; }
+body { background:#f3f3f3; color: #999; padding-top: 30px; border-top:solid 2px #e14c3b; font-family: 'Open Sans', sans-serif; }
 
 /* Bootstrap overwrites
 -------------------------------- */
 .container {max-width: 600px; position: relative; }
-.container-inner { padding:15%; }
-.fa.fa-user {font-size: 150%; color: #999; }
+.container-inner { padding:5%; }
+.fa.fa-user {font-size: 140%; color: #999; }
 .page-header {border: 0; }
+.navbar ul li a {color: #999; font-size: 110%; }
+.navbar ul li a:hover, .fa.fa-user:hover  {background: none; color:#e14c3b; }
+
+/* Footer */
+footer {text-align: center; padding: 20px 0; }
 
 /* Header
 -------------------------------- */
@@ -35,10 +40,14 @@ body { background:#f3f3f3; padding-top: 30px; border-top:solid 2px #e14c3b; font
 /* Entry */
 .entry-content {display:block; text-align:center; font-size: 800%; color: #74c17b; }
 .entry {position:relative; background-color:#fff; display: block; margin-bottom: 20px;  padding-top: 10px;  }
-.md {display: block; text-align: right;   }
-.md p {font-size: 120%; margin: 15px 30px; 0 0; color: #999; }
+.md {display: block; text-align: right; float: right; }
+.md p {font-size: 120%; color: #999; }
 
 /* Meta */
 .btn.add {background: none; border-color: #74c17b; color: #74c17b; margin-bottom: 10px; }
-.meta {padding: 10px 0; position: absolute; bottom: 0; left: 0; }
+.meta a:hover .fa-clock-o {color:#e14c3b; }
+.meta {color:#999; }
 .meta a {color:#999; font-weight: 200; }
+.meta a:hover {text-decoration: none; color:#e14c3b; }
+.meta a:hover span {text-decoration: none; color:#999; }
+.meta i {margin-right: 5px; }
