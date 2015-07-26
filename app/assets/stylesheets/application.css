@@ -15,7 +15,7 @@
  *= require font-awesome
  */
 
-body { background:#f3f3f3; color: #555; padding-top: 30px; border-top:solid 2px #e14c3b; font-family: 'Open Sans', sans-serif; }
+body { background:#ebebeb; color: #555; border-top:solid 2px #e14c3b; font-family: 'Open Sans', sans-serif; }
 
 /* Bootstrap overwrites
 -------------------------------- */
@@ -26,14 +26,15 @@ body { background:#f3f3f3; color: #555; padding-top: 30px; border-top:solid 2px 
 .navbar ul li a {color: #999; font-size: 110%; }
 .navbar ul li a:hover, .fa.fa-user:hover  {background: none; color:#e14c3b; }
 .navbar ul li a:focus, .fa.fa-user:hover  {background: none; }
+.navbar-default {background: #ebebeb; border:0; }
 
 /* Footer */
-footer {text-align: center; padding: 20px 0; }
+footer {background: #fff; color: #e14c3b; text-align: center; padding: 20px 0; border-top: solid 1px #e14c3b; }
 
 /* Header
 -------------------------------- */
 /* Logo */
-.logo {display: block; text-align: center; }
+.logo {display: block; text-align: center; margin-top: -70px; }
 .logo i, .logo h3 {color:#e14c3b; }
 .logo i {font-size: 100%; margin-right: 10px; }
 .logo h3 {font-size: 320%; font-family: 'Open Sans', sans-serif; font-weight: 700; } 

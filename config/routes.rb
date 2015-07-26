@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
-  get 'pages/about'
 
+  devise_for :users
+  get 'pages/about'
   get 'pages/contact'
+  root to: "entries#index"
 
   resources :entries
+
+  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
