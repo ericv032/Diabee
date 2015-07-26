@@ -15,16 +15,17 @@
  *= require font-awesome
  */
 
-body { background:#f3f3f3; color: #999; padding-top: 30px; border-top:solid 2px #e14c3b; font-family: 'Open Sans', sans-serif; }
+body { background:#f3f3f3; color: #555; padding-top: 30px; border-top:solid 2px #e14c3b; font-family: 'Open Sans', sans-serif; }
 
 /* Bootstrap overwrites
 -------------------------------- */
 .container {max-width: 600px; position: relative; }
 .container-inner { padding:5%; }
-.fa.fa-user {font-size: 140%; color: #999; }
+.fa.fa-user {font-size: 125%; color: #999; }
 .page-header {border: 0; }
 .navbar ul li a {color: #999; font-size: 110%; }
 .navbar ul li a:hover, .fa.fa-user:hover  {background: none; color:#e14c3b; }
+.navbar ul li a:focus, .fa.fa-user:hover  {background: none; }
 
 /* Footer */
 footer {text-align: center; padding: 20px 0; }
