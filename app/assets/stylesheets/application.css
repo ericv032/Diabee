@@ -15,21 +15,18 @@
  *= require font-awesome
  */
 
-body { background:#f3f3f3; padding-top: 40px; border-top:solid 2px #e14c3b; font-family: 'Open Sans', sans-serif; }
+body { background:#f3f3f3; padding-top: 30px; border-top:solid 2px #e14c3b; font-family: 'Open Sans', sans-serif; }
 
 /* Bootstrap overwrites
 -------------------------------- */
 
 .container {max-width: 600px; position: relative; }
-.container-inner { padding:5%; }
+.container-inner { padding:15%; }
 .fa.fa-user {font-size: 140%; }
 .page-header {border: 0; }
-.entry {background-color:#fff; display: block; margin-bottom: 20px;  padding-top: 10px;  }
-
-.btn.add {background: none; border-color: #74c17b; color: #74c17b; }
-
-.meta {padding: 10px 0; }
-
+.entry {position:relative; background-color:#fff; display: block; margin-bottom: 20px;  padding-top: 10px;  }
+.btn.add {background: none; border-color: #74c17b; color: #74c17b; margin-bottom: 10px; }
+.meta {padding: 10px 0; position: absolute; bottom: 0; left: 0; }
 .meta a {color:#999; font-weight: 200; }
 
 /* Header
@@ -37,5 +34,10 @@ body { background:#f3f3f3; padding-top: 40px; border-top:solid 2px #e14c3b; font
 /* Logo */
 .logo {display: block; text-align: center; }
 .logo i, .logo h3 {color:#e14c3b; }
-.logo i {font-size: 110%; margin-right: 10px; }
-.logo h3 {font-size: 260%; font-family: 'Open Sans', sans-serif; font-weight: 700; } 
+.logo i {font-size: 100%; margin-right: 10px; }
+.logo h3 {font-size: 320%; font-family: 'Open Sans', sans-serif; font-weight: 700; } 
+
+/* Entry */
+.entry-content {display:block; text-align:center; font-size: 900%; color: #74c17b; }
+.md {display: block; text-align: right;   }
+.md p {font-size: 120%; margin: 15px 30px; 0 0; color: #ccc; }
