@@ -19,7 +19,7 @@ body { background:#ebebeb; color: #555; font-family: 'Open Sans', sans-serif; }
 
 /* Bootstrap overwrites
 -------------------------------- */
-.container {max-width: 600px; position: relative;}
+.container {max-width: 600px; position: relative; padding-top: 20px; }
 .container-inner { padding:5%; }
 .fa.fa-user {font-size: 125%; color: #999; }
 .page-header {border: 0; }
@@ -62,7 +62,7 @@ footer {background: #fff; color: #e14c3b; text-align: center; padding: 20px 0; b
 .login-main label {font-weight: 200; }
 .login-main input {width: 100%; border-radius: 5px; margin-bottom: 20px; padding: 15px; border: solid 1px #ddd; }
 .login-main h3 {margin:0 0 20px 0; }
-.logo.login-portal {margin-bottom: 60px; }
+.logo.login-portal {margin-bottom: 40px; }
 
 .login-main ul {margin:0; padding:0; }
 .login-main li {margin:0; padding:0; list-style-type: none; display: inline-block; float: left; }
@@ -70,7 +70,19 @@ footer {background: #fff; color: #e14c3b; text-align: center; padding: 20px 0; b
 .actions input {background: #ddd; border: 0;   }
 .actions input:hover {background: #74c17b; transition:all .2s ease-in-out; color:#fff; }
 
-
+/* Navigations */
+.main-nav { position:fixed;width:250px; display: none; min-height:100%; background:#e14c3b; top:0; left:0; }
+.main-nav ul {margin:0; padding:0; }
+.main-nav li {margin:0; padding:0; list-style-type:none; display:block;  }
+.main-nav li a {display:block; padding:15px; color:#fff; text-decoration:none; text-transform:uppercase; transition:all .3s ease-in-out;  }
+.main-nav li a:hover {background:rgba(255,255,255,0.1); }
+.main-nav .nav-inner {padding: 45px 0 0 0; }
+#toggle {position:absolute; left:30px; top:25px; font-size:150%; }
+#toggle:hover {cursor:pointer; }
+.close {display: block; text-align: right; }
+.close i {color: #fff; }
+.user-id {color: #fff; background-color: rgba(255,255,255,0.2); padding: 15px !important; }
+#close {font-size: 120%; padding: 10px; }
 
 
 

@@ -8,25 +8,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <!-- <%= link_to 'holaa', entries_path, class: "navbar-brand" %> -->
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">    
-      <ul class="nav navbar-nav navbar-right">
-     <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bars"></i></a>
-         <ul class="dropdown-menu">
-            <li><% if user_signed_in? %><strong><%= current_user.email %></strong></li>
+   <i id="toggle" class="fa fa-bars"></i>
+	<nav class="main-nav">
+    <span class="close"><i id="close" class="fa fa-times"></i></span>
+    <div class="nav-inner">
+         <ul>
+            <li class="user-id"><% if user_signed_in? %><%= current_user.email %></li>
             <li><%= link_to "Home", entries_path %></li>
             <li><%= link_to "About", {:controller => '/pages', :action => 'about'} %></li> 
             <li role="separator" class="divider"></li>         
@@ -37,10 +24,7 @@
             <li><%= link_to "Sign in", new_user_session_path, :class => 'navbar-link' %></li>
             <% end %>
           </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
 </nav>
 <div class="container">
 <% if notice %>
@@ -60,5 +44,21 @@
  <!-- <footer>
    <p>Copyright (c) 2015</p>
  </footer> -->
+ <script>
+ // Nav Toggle
+$(function() {
+$( '#toggle' ).click(function() {
+  $( '.main-nav' ).toggle( 'slide' , { direction: 'left' }, 200  );
+  });
+  
+});
+
+$(function() {
+$( '#close' ).click(function() {
+  $( '.main-nav' ).toggle( 'slide' , { direction: 'left' }, 200  );
+  });
+  
+});
+</script>
 </body>
 </html>
