@@ -15,11 +15,11 @@
  *= require font-awesome
  */
 
-body { background:#ebebeb; color: #555; border-top:solid 2px #e14c3b; font-family: 'Open Sans', sans-serif; }
+body { background:#ebebeb; color: #555; font-family: 'Open Sans', sans-serif; }
 
 /* Bootstrap overwrites
 -------------------------------- */
-.container {max-width: 600px; position: relative; }
+.container {max-width: 600px; position: relative;}
 .container-inner { padding:5%; }
 .fa.fa-user {font-size: 125%; color: #999; }
 .page-header {border: 0; }
@@ -34,8 +34,8 @@ footer {background: #fff; color: #e14c3b; text-align: center; padding: 20px 0; b
 /* Header
 -------------------------------- */
 /* Logo */
-.logo {display: block; text-align: center; margin-top: -70px; }
-.logo i, .logo h3 {color:#e14c3b; }
+.logo {display: block; text-align: center; }
+.logo i, .logo h3 {color:#e14c3b; margin:0; }
 .logo i {font-size: 100%; margin-right: 10px; }
 .logo h3 {font-size: 320%; font-family: 'Open Sans', sans-serif; font-weight: 700; } 
 
@@ -53,3 +53,29 @@ footer {background: #fff; color: #e14c3b; text-align: center; padding: 20px 0; b
 .meta a:hover {text-decoration: none; color:#e14c3b; }
 .meta a:hover span {text-decoration: none; color:#999; }
 .meta i {margin-right: 5px; }
+
+/* Sign in portal
+-------------------------------- */
+/* Header */
+.login-h {display: block; text-align: center; margin: 50px 0 0 0; }
+.login-main {background: #fff; max-width: 375px; border-radius: 5px; margin-top:25px; padding: 30px; color: #555; font-weight: 200;  }
+.login-main label {font-weight: 200; }
+.login-main input {width: 100%; border-radius: 5px; margin-bottom: 20px; padding: 15px; border: solid 1px #ddd; }
+.login-main h3 {margin:0 0 20px 0; }
+.logo.login-portal {margin-bottom: 60px; }
+
+.login-main ul {margin:0; padding:0; }
+.login-main li {margin:0; padding:0; list-style-type: none; display: inline-block; float: left; }
+.login-main .c-box-label { margin-left: 20px; }
+.actions input {background: #ddd; border: 0;   }
+.actions input:hover {background: #74c17b; transition:all .2s ease-in-out; color:#fff; }
+
+
+
+
+
+
+
+
+
+
