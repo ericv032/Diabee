@@ -10,10 +10,10 @@
 <body>
    <i id="toggle" class="fa fa-bars"></i>
 	<nav class="main-nav">
-    <span class="close"><i id="close" class="fa fa-times"></i></span>
     <div class="nav-inner">
+      <span id="close"><i class="fa fa-times"></i></span>
          <ul>
-            <li class="user-id"><% if user_signed_in? %><%= current_user.email %></li>
+            <% if user_signed_in? %><li class="user-id"><i class="fa fa-user"></i><%= current_user.email %></li>
             <li><%= link_to "Home", entries_path %></li>
             <li><%= link_to "About", {:controller => '/pages', :action => 'about'} %></li> 
             <li role="separator" class="divider"></li>         
@@ -41,9 +41,7 @@
   <% end %>
 <%= yield %>
 </div><!-- .container -->
- <!-- <footer>
-   <p>Copyright (c) 2015</p>
- </footer> -->
+
  <script>
  // Nav Toggle
 $(function() {
