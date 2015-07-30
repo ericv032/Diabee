@@ -1,8 +1,9 @@
-<div class="page-header">
-  <div class="logo animated fadeIn" >
+<header>
+  <div class="logo login-portal animated fadeIn">
     <h3><span><i class="fa fa-plus-circle"></i></span>Diabee</h3>
   </div><!-- .logo -->
-</div>
+<h3>Track your blood glucose levels</h3>
+  </header>
  <%= link_to 'Add Result', new_entry_path, class: "btn btn-default add" %>
     <% @entries.each do |entry| %>
    
@@ -12,7 +13,7 @@
 
         <!-- <h3><%= entry.name %></h3> -->
  
-       <p class="entry-content"><%= entry.content %></p>
+       <p class="entry-content"><%= entry.results %></p>
 
        <span class="md"><p>mg/dl</p></span>
 

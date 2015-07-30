@@ -16,7 +16,7 @@
             <% if user_signed_in? %><li class="user-id"><i class="fa fa-user"></i><%= current_user.email %></li>
             <li><%= link_to "Home", entries_path %></li>
             <li><%= link_to "About", {:controller => '/pages', :action => 'about'} %></li> 
-            <li><%= link_to "Download Results", entries_path(format: "csv") %></li> 
+            <li><%= link_to "Download Results (CSV)", entries_path(format: "csv") %></li> 
             <li role="separator" class="divider"></li>         
             <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li>
             <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>

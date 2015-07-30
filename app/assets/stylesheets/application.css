@@ -19,7 +19,7 @@ body { background:#e8edf0; background-size: cover; color: #555; font-family: 'Op
 
 /* Bootstrap overwrites
 -------------------------------- */
-.container {max-width: 600px; position: relative; padding-top: 20px; }
+.container {max-width: 600px; position: relative; padding-top: 0; }
 .container-inner { padding:5%; }
 .fa.fa-user {font-size: 125%; color: #999; }
 .page-header {border: 0; }
@@ -34,7 +34,7 @@ footer {background: #fff; color: #e14c3b; text-align: center; padding: 20px 0; b
 /* Header
 -------------------------------- */
 /* Logo */
-.logo {display: block; text-align: center; }
+.logo {display: block; text-align: center; margin-bottom: 20px; }
 .logo i, .logo h3 {color:#e14c3b; margin:0; }
 .logo i {font-size: 100%; margin-right: 10px; }
 .logo h3 {font-size: 320%; font-family: 'Open Sans', sans-serif; font-weight: 700; } 
@@ -57,7 +57,8 @@ footer {background: #fff; color: #e14c3b; text-align: center; padding: 20px 0; b
 /* Sign in portal
 -------------------------------- */
 /* Header */
-.login-h {display: block; text-align: center; margin: 50px 0 0 0; }
+header, .login-h {display: block; text-align: center; margin: 40px 0 0 0; }
+header h3, .login-h p {color: #999; display: block; margin:0 0 30px 0; }
 .login-h h3, .login-h p {color: #f3f3f3; }
 .login-main {background: #fff; max-width: 375px; border-radius: 5px; margin-top:25px; padding: 30px; color: #555; font-weight: 200;  }
 .login-main label {font-weight: 200; }
@@ -79,7 +80,7 @@ footer {background: #fff; color: #e14c3b; text-align: center; padding: 20px 0; b
 .main-nav li a {display:block; padding:15px; color:rgba(255,255,255,.9); text-decoration:none; text-transform:uppercase; transition:all .3s ease-in-out;  }
 .main-nav li a:hover {background:rgba(255,255,255,0.1); }
 .divider {border-bottom: solid 1px rgba(255,255,255,.2); }
-#toggle {position:absolute; left:30px; top:25px; font-size:150%; z-index: 1;  }
+#toggle {position:absolute; left:50px; top:45px; font-size:150%; z-index: 1; color: #999999  }
 #toggle:hover {cursor:pointer; }
 #close {display: block; text-align: right; }
 #close i {color: #fff; font-weight: 100;  }
@@ -89,7 +90,7 @@ footer {background: #fff; color: #e14c3b; text-align: center; padding: 20px 0; b
 
 .signedin-wrap {position:fixed; width: 100%; height: 100%; top:0; left: 0; background:#ebebeb url(/assets/app-bg.jpg) no-repeat 0 0; background-size: cover; }
 
-
+.alert {margin-top: 50px; }
 
 
 
