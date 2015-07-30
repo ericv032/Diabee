@@ -5,6 +5,10 @@ class EntriesController < ApplicationController
   # GET /entries.json
   def index
     @entries = Entry.all
+    respond_to do |format|
+      format.html
+      format.csv { render text: @entries.to_csv }
+    end
   end
 
   # GET /entries/1

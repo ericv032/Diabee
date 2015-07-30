@@ -15,7 +15,7 @@
  *= require font-awesome
  */
 
-body { background:#ebebeb url(/assets/app-bg.jpg) no-repeat 0 0; background-size: cover; color: #555; font-family: 'Open Sans', sans-serif; }
+body { background:#e8edf0; background-size: cover; color: #555; font-family: 'Open Sans', sans-serif; }
 
 /* Bootstrap overwrites
 -------------------------------- */
@@ -73,19 +73,21 @@ footer {background: #fff; color: #e14c3b; text-align: center; padding: 20px 0; b
 .actions input:hover {background: #ddd; transition:all .2s ease-in-out;  }
 
 /* Navigations */
-.main-nav { position:fixed;width:260px; display: none; min-height:100%; background:#e14c3b; top:0; left:0; }
+.main-nav { position:fixed;width:260px; display: none; min-height:100%; background:#e14c3b; top:0; left:0; z-index: 1;  }
 .main-nav ul {margin:0; padding:0; }
-.main-nav li {margin:0; padding:0; list-style-type:none; display:block; font-size: 90%;  }
+.main-nav li {margin:0; padding:0; list-style-type:none; display:block; font-size: 85%;  }
 .main-nav li a {display:block; padding:15px; color:rgba(255,255,255,.9); text-decoration:none; text-transform:uppercase; transition:all .3s ease-in-out;  }
 .main-nav li a:hover {background:rgba(255,255,255,0.1); }
-#toggle {position:absolute; left:30px; top:25px; font-size:150%; }
+.divider {border-bottom: solid 1px rgba(255,255,255,.2); }
+#toggle {position:absolute; left:30px; top:25px; font-size:150%; z-index: 1;  }
 #toggle:hover {cursor:pointer; }
 #close {display: block; text-align: right; }
 #close i {color: #fff; font-weight: 100;  }
-.user-id {color: #fff; background-color: rgba(255,255,255,0.1); padding: 15px !important; border-bottom: solid 1px rgba(255,255,255,.3); }
+.user-id {color: #fff; background-color: rgba(255,255,255,0.1); padding: 15px !important; border-bottom: solid 1px rgba(255,255,255,.2); }
 .user-id i {color: rgba(255,255,255,.5) !important; margin-right: 7px; font-size: 140%; }
 #close {font-size: 120%; padding: 10px; }
 
+.signedin-wrap {position:fixed; width: 100%; height: 100%; top:0; left: 0; background:#ebebeb url(/assets/app-bg.jpg) no-repeat 0 0; background-size: cover; }
 
 
 
