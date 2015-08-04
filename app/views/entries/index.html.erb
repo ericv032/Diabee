@@ -1,36 +1,20 @@
 <header>
-  <div class="logo login-portal animated fadeIn">
-    <h3><span><i class="fa fa-plus-circle"></i></span>Diabee</h3>
-  </div><!-- .logo -->
-<h3>Track your blood glucose levels</h3>
-  </header>
- <%= link_to 'Add Result', new_entry_path, class: "btn btn-default add" %>
+    <img class="logo animated fadeIn" src="/assets/diabee-logo.png" alt="Diabee" />
+    <h3>Track your blood glucose levels</h3>
+</header>
+ <span id="modal-toggle" class="btn btn-default add">Add Result</span>
     <% @entries.each do |entry| %>
-   
   <div class="entry">
-
-      <div class="container-inner">
-
-        <!-- <h3><%= entry.name %></h3> -->
- 
+      <div class="container-inner"> 
        <p class="entry-content"><%= entry.results %></p>
-
        <span class="md"><p>mg/dl</p></span>
-
        <div class="meta el">
-
         <span><i class="fa fa-clock-o"></i><%= link_to time_ago_in_words(entry.created_at), entry %></span>
-
         <%= link_to entry, method: :delete, data: { confirm: 'Are you sure?' } do %> <span>/</span> 
           <i class="fa fa-trash-o"></i>
-
         <% end %>
-
        </div><!-- .meta -->
-
      </div><!-- .container-inner -->
-
   </div><!-- .entry -->
-
 <% end %>
 

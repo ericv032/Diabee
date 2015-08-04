@@ -2,21 +2,28 @@
 <html>
 <head>
   <title>Diabee / A glucose levels tracker app</title>
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="-1">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-   <i id="toggle" class="fa fa-bars"></i>
+  <div class="entry-modal-wrap">
+     <div class="container animated slideDown">
+      <%= render 'form' %>
+     </div><!-- .entry-container -->
+  </div><!-- .entry-wrap -->
+   <i id="toggle" class="icon-menu"></i>
 	<nav class="main-nav">
     <div class="nav-inner">
-      <span id="close"><i class="fa fa-times"></i></span>
+      <span id="close"><i class="icon-cross"></i></span>
          <ul>
             <% if user_signed_in? %><li class="user-id"><i class="fa fa-user"></i><%= current_user.email %></li>
             <li><%= link_to "Home", entries_path %></li>
             <li><%= link_to "About", {:controller => '/pages', :action => 'about'} %></li> 
-            <li><%= link_to "Download Results (CSV)", entries_path(format: "csv") %></li> 
+            <li><%= link_to "Export Results (CSV)", entries_path(format: "csv") %></li> 
             <li role="separator" class="divider"></li>         
             <li><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> </li>
             <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
@@ -35,29 +42,12 @@
 </div>
   <% end %>
   <% if alert %>
-  <!-- <div class="alert alert-danger" role="alert">
+  <div class="alert alert-danger" role="alert">
     <a class="close" data-dismiss="alert" aria-hidden="true">×</a>
       <span class="alert"><%= alert %></span>
-    </div> -->
+    </div>
   <% end %>
 <%= yield %>
 </div><!-- .container -->
-
- <script>
- // Nav Toggle
-$(function() {
-$( '#toggle' ).click(function() {
-  $( '.main-nav' ).toggle( 'slide' , { direction: 'left' }, 200  );
-  });
-  
-});
-
-$(function() {
-$( '#close' ).click(function() {
-  $( '.main-nav' ).toggle( 'slide' , { direction: 'left' }, 200  );
-  });
-  
-});
-</script>
 </body>
 </html>

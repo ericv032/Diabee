@@ -16,3 +16,34 @@
 //= require bootstrap/bootstrap
 //= require_tree .
 
+
+ // Nav Toggle
+$(function() {
+$( '#toggle' ).click(function() {
+  $( '.main-nav' ).toggle( 'slide' , { direction: 'left' }, 200  );
+  return false;
+  }); 
+});
+
+$(function() {
+$( '#close' ).click(function() {
+  $( '.main-nav' ).toggle( 'slide' , { direction: 'left' }, 200  );
+  });
+});
+
+
+ // Modal Toggle
+$(function() {
+$( '#modal-toggle' ).click(function() {
+  $( '.entry-modal-wrap' ).toggle( 'slide' , { direction: 'up' }, 200  );
+  return false;
+  }); 
+});
+
+$(function() {
+$( '#close-modal' ).click(function() {
+  $( '.entry-modal-wrap' ).toggle( 'slide' , { direction: 'up' }, 200  );
+  });
+});
+
+$(".field :input").attr("autocomplete", "off");

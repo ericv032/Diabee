@@ -15,7 +15,7 @@
  *= require font-awesome
  */
 
-body { background:#e8edf0; background-size: cover; color: #555; font-family: 'Open Sans', sans-serif; }
+body { background:#e8edf0; background-size: cover; height: 100%;  color: #555; font-family: 'Open Sans', sans-serif; }
 
 /* Bootstrap overwrites
 -------------------------------- */
@@ -33,22 +33,25 @@ footer {background: #fff; color: #e14c3b; text-align: center; padding: 20px 0; b
 
 /* Header
 -------------------------------- */
-/* Logo */
-.logo {display: block; text-align: center; margin-bottom: 20px; }
-.logo i, .logo h3 {color:#e14c3b; margin:0; }
-.logo i {font-size: 100%; margin-right: 10px; }
-.logo h3 {font-size: 320%; font-family: 'Open Sans', sans-serif; font-weight: 700; } 
+header {display: block; text-align: center; }
+.logo {margin:10px 0 50px 0; width: 200px; height: auto; }
 
 /* Entry */
 .entry-content {display:block; text-align:center; font-size: 800%; color: #74c17b; }
-.entry {position:relative; background-color:#fff; display: block; margin-bottom: 20px;  padding-top: 10px;  }
+.entry {position:relative; background-color:#fff; display: block; margin-bottom: 15px;  padding-top: 10px; 
+-webkit-box-shadow: 0px 7px 0px -4px rgba(156,153,156,0.5);
+   -moz-box-shadow: 0px 7px 0px -4px rgba(156,153,156,0.5);
+        box-shadow: 0px 7px 0px -4px rgba(156,153,156,0.5);
+ }
+.add {display:block; text-align: center; padding: 15px 0; transition:all .2s ease-in-out;  }
+.add:hover {background:#dc3054 !important; color:#fff !important; border:solid 1px #dc3054 !important;}
 .md {display: block; text-align: right; float: right; }
 .md p {font-size: 120%; color: #999; }
 
 /* Meta */
 .btn.add {background: none; border-color: #74c17b; color: #74c17b; margin-bottom: 10px; }
 .meta a:hover .fa-clock-o {color:#e14c3b; }
-.meta {color:#999; }
+.meta {color:#999; text-align: left; }
 .meta a {color:#999; font-weight: 200; }
 .meta a:hover {text-decoration: none; color:#e14c3b; }
 .meta a:hover span {text-decoration: none; color:#999; }
@@ -57,10 +60,13 @@ footer {background: #fff; color: #e14c3b; text-align: center; padding: 20px 0; b
 /* Sign in portal
 -------------------------------- */
 /* Header */
-header, .login-h {display: block; text-align: center; margin: 40px 0 0 0; }
-header h3, .login-h p {color: #999; display: block; margin:0 0 30px 0; }
+header, .login-h {display: block; text-align: center; margin: 30px 0 0 0; }
+header h3, .login-h p {color: #999; display: block; margin:0 0 50px 0; }
+
+.signedin-wrap {background:#ebebeb url(/assets/app-bg.jpg) no-repeat 0 0; position:fixed; width: 100%; height: 100%; top:0; left: 0;  background-size: cover; }
+
 .login-h h3, .login-h p {color: #f3f3f3; }
-.login-main {background: #fff; max-width: 375px; border-radius: 5px; margin-top:25px; padding: 30px; color: #555; font-weight: 200;  }
+.login-main {background: #fff; max-width: 375px;  margin-top:25px; padding: 30px; color: #555; font-weight: 200;  }
 .login-main label {font-weight: 200; }
 .login-main input {width: 100%; border-radius: 5px; margin-bottom: 20px; padding: 15px; border: solid 1px #ddd; }
 .login-main h3 {margin:0 0 20px 0; }
@@ -74,23 +80,53 @@ header h3, .login-h p {color: #999; display: block; margin:0 0 30px 0; }
 .actions input:hover {background: #ddd; transition:all .2s ease-in-out;  }
 
 /* Navigations */
-.main-nav { position:fixed;width:260px; display: none; min-height:100%; background:#e14c3b; top:0; left:0; z-index: 1;  }
+.main-nav { position:fixed;width:260px; display: none; min-height:100%; background:#dc3054; top:0; left:0; z-index: 1;  }
 .main-nav ul {margin:0; padding:0; }
 .main-nav li {margin:0; padding:0; list-style-type:none; display:block; font-size: 85%;  }
 .main-nav li a {display:block; padding:15px; color:rgba(255,255,255,.9); text-decoration:none; text-transform:uppercase; transition:all .3s ease-in-out;  }
 .main-nav li a:hover {background:rgba(255,255,255,0.1); }
 .divider {border-bottom: solid 1px rgba(255,255,255,.2); }
-#toggle {position:absolute; left:50px; top:45px; font-size:150%; z-index: 1; color: #999999  }
+#toggle {position:absolute; left:47px; top:42px; font-size:150%; z-index: 1; color: #999999  }
 #toggle:hover {cursor:pointer; }
 #close {display: block; text-align: right; }
 #close i {color: #fff; font-weight: 100;  }
 .user-id {color: #fff; background-color: rgba(255,255,255,0.1); padding: 15px !important; border-bottom: solid 1px rgba(255,255,255,.2); }
 .user-id i {color: rgba(255,255,255,.5) !important; margin-right: 7px; font-size: 140%; }
 #close {font-size: 120%; padding: 10px; }
-
-.signedin-wrap {position:fixed; width: 100%; height: 100%; top:0; left: 0; background:#ebebeb url(/assets/app-bg.jpg) no-repeat 0 0; background-size: cover; }
-
 .alert {margin-top: 50px; }
+
+/* ENTRY MODAL
+-------------------------------- */
+.entry-modal-wrap {display:none; background-color:#fff; position: fixed; width:100%; height: auto; min-height: 100%; z-index: 999; }
+.entry-modal-wrap .container {text-align: center; }
+
+.entry-modal-wrap .field input {background: #eee; width:60%; padding: 20px; border:0; text-align: center; font-size: 300%; }
+.entry-modal-wrap .actions input {background: #74c17b; width:60%; padding: 30px; border:0; color:#fff; }
+
+/* RESPONSIVE
+-------------------------------- */
+/* Max-width */
+@media screen and (max-width: 650px) {
+header {margin-bottom: 40px; }
+header h3 {font-size: 130%; }
+.entry-content {font-size: 500% !important; transition:all .2s linear; }
+
+/* Logo */
+.logo {margin:0 0 30px 0; width: 180px; height: auto; }
+
+#toggle {left:20px; top:40px; transition:all .2s linear; }
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
