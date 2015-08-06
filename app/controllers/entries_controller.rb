@@ -17,6 +17,10 @@ class EntriesController < ApplicationController
   def show
   end
 
+   def home
+    @entry = Entry.new
+  end
+
   # GET /entries/new
   def new
     @entry = Entry.new

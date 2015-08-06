@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
+  get 'pages/home'
+
   get 'homes/show'
 
   devise_for :users
   get 'pages/about'
   get 'pages/contact'
-  root to: "entries#index"
+  get 'pages/home'
+  root to: "pages#home"
 
   resources :entries
 

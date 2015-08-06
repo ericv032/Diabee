@@ -1,0 +1,44 @@
+  <div class="entry-modal-wrap">
+  	<i id="close-modal" class="icon-cross"></i>
+     <div class="container animated fadeInUp">
+      <%= render 'form' %>
+     </div><!-- .entry-container -->
+  </div><!-- .entry-wrap -->
+
+ <div class="home-wrap">
+
+ 	<header>
+    <img class="logo animated fadeInDown" src="/assets/diabee-logo.png" alt="Diabee" />
+    <h3 class="animated fadeInDown">Start tracking your glucose levels</h3>
+	</header>
+
+ 	<div class="container">
+
+ 			<span class="entry-btn"><img id="modal-toggle" src="/assets/add-entry-btn.png" alt="Entry button" role="button" /></span>
+
+ 	</div><!-- .container -->
+
+ </div><!-- .home-wrap -->
+
+ <script>
+  // Modal Toggle
+$(function() {
+$( '#modal-toggle' ).click(function() {
+  $( '.entry-modal-wrap' ).toggle( 'slide' , { direction: 'down' }, 200  );
+  }); 
+});
+
+$(function() {
+$( '#close-modal' ).click(function() {
+  $( '.entry-modal-wrap' ).toggle( 'slide' , { direction: 'down' }, 200  );
+  });
+});
+
+$("input").prop("maxLength", 3)
+
+$(document).ready(function(){
+    $(':input').live('focus',function(){
+        $(this).attr('autocomplete', 'off');
+    });
+});
+</script>

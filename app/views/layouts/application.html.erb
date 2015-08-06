@@ -10,18 +10,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="entry-modal-wrap">
-     <div class="container animated slideDown">
-      <%= render 'form' %>
-     </div><!-- .entry-container -->
-  </div><!-- .entry-wrap -->
+
    <i id="toggle" class="icon-menu"></i>
 	<nav class="main-nav">
     <div class="nav-inner">
       <span id="close"><i class="icon-cross"></i></span>
          <ul>
             <% if user_signed_in? %><li class="user-id"><i class="fa fa-user"></i><%= current_user.email %></li>
-            <li><%= link_to "Home", entries_path %></li>
+            <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "About", {:controller => '/pages', :action => 'about'} %></li> 
             <li><%= link_to "Export Results (CSV)", entries_path(format: "csv") %></li> 
             <li role="separator" class="divider"></li>         
@@ -49,5 +45,20 @@
   <% end %>
 <%= yield %>
 </div><!-- .container -->
+<script>
+ // Nav Toggle
+$(function() {
+$( '#toggle' ).click(function() {
+  $( '.main-nav' ).toggle( 'slide' , { direction: 'left' }, 200  );
+  }); 
+});
+
+$(function() {
+$( '#close' ).click(function() {
+  $( '.main-nav' ).toggle( 'slide' , { direction: 'left' }, 200  );
+  });
+});
+
+</script>
 </body>
 </html>

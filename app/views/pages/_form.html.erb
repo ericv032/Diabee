@@ -1,4 +1,7 @@
-<%= simple_form_for Entry.new do |f| %>
+
+<h3>Type in your meter results.</h3>
+
+<%= form_for Entry.new do |f| %>
   <% if @entry.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
@@ -10,10 +13,12 @@
       </ul>
     </div>
   <% end %>
+
   <div class="field">
-     <%= f.input_field :results, input_html: { maxlength: 3 } %>
+    <%= f.text_field :results %>
   </div>
   <div class="actions">
-    <%= f.button :submit "Submit" %>
+    <%= f.submit "Add card" %>
   </div>
+  <span class="md f"><p>mg/dl</p></span>
 <% end %>

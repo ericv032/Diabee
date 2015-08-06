@@ -15,7 +15,7 @@
  *= require font-awesome
  */
 
-body { background:#e8edf0; background-size: cover; height: 100%;  color: #555; font-family: 'Open Sans', sans-serif; }
+body { background:#e8edf0; background-size: cover; height: 100%;  color: #999; font-family: 'Open Sans', sans-serif; }
 
 /* Bootstrap overwrites
 -------------------------------- */
@@ -34,18 +34,19 @@ footer {background: #fff; color: #e14c3b; text-align: center; padding: 20px 0; b
 /* Header
 -------------------------------- */
 header {display: block; text-align: center; }
-.logo {margin:10px 0 50px 0; width: 200px; height: auto; }
+.logo {margin:10px 0 50px 0; width: 180px; height: auto; }
 
 /* Entry */
 .entry-content {display:block; text-align:center; font-size: 800%; color: #74c17b; }
-.entry {position:relative; background-color:#fff; display: block; margin-bottom: 15px;  padding-top: 10px; 
+.entry {position:relative; background-color:#fff; display: block; margin: 15px 0;  padding-top: 10px; 
 -webkit-box-shadow: 0px 7px 0px -4px rgba(156,153,156,0.5);
    -moz-box-shadow: 0px 7px 0px -4px rgba(156,153,156,0.5);
         box-shadow: 0px 7px 0px -4px rgba(156,153,156,0.5);
  }
-.add {display:block; text-align: center; padding: 15px 0; transition:all .2s ease-in-out;  }
+.add {display:block; text-align: center; padding: 15px 0; transition:all .2s ease-in-out; border-radius: 0; }
 .add:hover {background:#dc3054 !important; color:#fff !important; border:solid 1px #dc3054 !important;}
 .md {display: block; text-align: right; float: right; }
+.md.f {position: absolute;bottom: 100px; right:50px; }
 .md p {font-size: 120%; color: #999; }
 
 /* Meta */
@@ -57,7 +58,13 @@ header {display: block; text-align: center; }
 .meta a:hover span {text-decoration: none; color:#999; }
 .meta i {margin-right: 5px; }
 
-/* Sign in portal
+/* HOME
+-------------------------------- */
+.home-wrap {background:#eee; position: fixed; width:100%; height: 100%; top:0; left: 0; border-bottom: solid 3px #dc3054; padding-top: 100px; }
+.home-wrap header h3 {color:#74c17b; font-weight: 200; }
+.home-wrap .entry-btn {display: block; text-align: center; }
+
+/* SIGN IN
 -------------------------------- */
 /* Header */
 header, .login-h {display: block; text-align: center; margin: 30px 0 0 0; }
@@ -86,7 +93,7 @@ header h3, .login-h p {color: #999; display: block; margin:0 0 50px 0; }
 .main-nav li a {display:block; padding:15px; color:rgba(255,255,255,.9); text-decoration:none; text-transform:uppercase; transition:all .3s ease-in-out;  }
 .main-nav li a:hover {background:rgba(255,255,255,0.1); }
 .divider {border-bottom: solid 1px rgba(255,255,255,.2); }
-#toggle {position:absolute; left:47px; top:42px; font-size:150%; z-index: 1; color: #999999  }
+#toggle {position:absolute; left:40px; top:35px; font-size:150%; z-index: 1; color: #999999  }
 #toggle:hover {cursor:pointer; }
 #close {display: block; text-align: right; }
 #close i {color: #fff; font-weight: 100;  }
@@ -97,11 +104,24 @@ header h3, .login-h p {color: #999; display: block; margin:0 0 50px 0; }
 
 /* ENTRY MODAL
 -------------------------------- */
-.entry-modal-wrap {display:none; background-color:#fff; position: fixed; width:100%; height: auto; min-height: 100%; z-index: 999; }
+.entry-modal-wrap {display:none; background-color:#eee; position: fixed; width:100%; height: 100%; z-index: 999; top:0; left: 0; padding-top: 150px; }
 .entry-modal-wrap .container {text-align: center; }
+.entry-modal-wrap .field {background: #fff; position: relative; overflow: hidden; display: block; padding: 50px; margin: 30px 0; 
+-webkit-box-shadow: 0px 7px 0px -4px rgba(156,153,156,0.5);
+   -moz-box-shadow: 0px 7px 0px -4px rgba(156,153,156,0.5);
+        box-shadow: 0px 7px 0px -4px rgba(156,153,156,0.5);
 
-.entry-modal-wrap .field input {background: #eee; width:60%; padding: 20px; border:0; text-align: center; font-size: 300%; }
-.entry-modal-wrap .actions input {background: #74c17b; width:60%; padding: 30px; border:0; color:#fff; }
+}
+.entry-modal-wrap .field label {display: none; }
+.entry-modal-wrap .field input { width:100%;  border:0; text-align: center; margin-bottom: 10px; font-size: 800%; color: #74c17b;  }
+.entry-modal-wrap .actions input {background:transparent; border:0; color:#fff; border:solid 1px #74c17b; color: #74c17b; padding: 15px 55px; font-size: 140%; transition:all .2s ease-in-out; }
+.entry-modal-wrap .actions input:hover {background:#dc3054; color:#fff !important; border:solid 1px #dc3054 !important; }
+.entry-modal-wrap .icon-cross {position: absolute; top:30px; right:30px; color:#999; font-size: 220%; }
+.entry-modal-wrap .icon-cross:hover {cursor: pointer; }
+
+*:focus {
+    outline: none;
+}
 
 /* RESPONSIVE
 -------------------------------- */
@@ -110,7 +130,8 @@ header h3, .login-h p {color: #999; display: block; margin:0 0 50px 0; }
 header {margin-bottom: 40px; }
 header h3 {font-size: 130%; }
 .entry-content {font-size: 500% !important; transition:all .2s linear; }
-
+.entry-modal-wrap .field input { font-size: 500%; }
+.entry-modal-wrap {padding-top: 100px; }
 /* Logo */
 .logo {margin:0 0 30px 0; width: 180px; height: auto; }
 
