@@ -2,8 +2,6 @@
 <html>
 <head>
   <title>Diabee / A glucose levels tracker app</title>
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="-1">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -45,20 +43,5 @@
   <% end %>
 <%= yield %>
 </div><!-- .container -->
-<script>
- // Nav Toggle
-$(function() {
-$( '#toggle' ).click(function() {
-  $( '.main-nav' ).toggle( 'slide' , { direction: 'left' }, 200  );
-  }); 
-});
-
-$(function() {
-$( '#close' ).click(function() {
-  $( '.main-nav' ).toggle( 'slide' , { direction: 'left' }, 200  );
-  });
-});
-
-</script>
 </body>
 </html>

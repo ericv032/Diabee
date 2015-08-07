@@ -12,7 +12,42 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap/bootstrap
 //= require_tree .
 
+ // Nav Toggle
+$(function() {
+$( '#toggle' ).click(function() {
+  $( '.main-nav' ).toggle( 'slide' , { direction: 'left' }, 200  );
+  }); 
+});
+
+$(function() {
+$( '#close' ).click(function() {
+  $( '.main-nav' ).toggle( 'slide' , { direction: 'left' }, 200  );
+  });
+});
+
+
+
+// Modal Toggle
+$(function() {
+$( '#modal-toggle' ).click(function() {
+  $( '.entry-modal-wrap' ).toggle( 'slide' , { direction: 'down' }, 200  );
+  }); 
+});
+
+$(function() {
+$( '#close-modal' ).click(function() {
+  $( '.entry-modal-wrap' ).toggle( 'slide' , { direction: 'down' }, 200  );
+  });
+});
+
+$(function() {
+    $(':input').live('focus',function(){
+        $(this).attr('autocomplete', 'off');
+    });
+});
+
+
+$("input").prop("maxLength", 3)
